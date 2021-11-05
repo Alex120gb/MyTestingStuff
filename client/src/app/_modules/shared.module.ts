@@ -9,6 +9,7 @@ import { ButtonModule } from 'primeng/button';
 import { PasswordModule } from 'primeng/password';
 import { ToastrModule } from 'ngx-toastr';
 import { TabsModule } from 'ngx-bootstrap/tabs'
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 
 
 
@@ -26,7 +27,8 @@ import { TabsModule } from 'ngx-bootstrap/tabs'
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
     }),
-    TabsModule.forRoot()
+    TabsModule.forRoot(),
+    NgxGalleryModule
   ],
   exports: [
     BsDropdownModule,
@@ -37,7 +39,8 @@ import { TabsModule } from 'ngx-bootstrap/tabs'
     ButtonModule,
     PasswordModule,
     ToastrModule,
-    TabsModule
+    TabsModule,
+    NgxGalleryModule
   ]
 })
 export class SharedModule { }
