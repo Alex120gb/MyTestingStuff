@@ -8,6 +8,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { PasswordModule } from 'primeng/password';
 import { ToastrModule } from 'ngx-toastr';
+import { TabsModule } from 'ngx-bootstrap/tabs'
 
 
 
@@ -24,7 +25,8 @@ import { ToastrModule } from 'ngx-toastr';
     PasswordModule,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
-    })
+    }),
+    TabsModule.forRoot()
   ],
   exports: [
     BsDropdownModule,
@@ -34,7 +36,8 @@ import { ToastrModule } from 'ngx-toastr';
     InputTextModule,
     ButtonModule,
     PasswordModule,
-    ToastrModule
+    ToastrModule,
+    TabsModule
   ]
 })
 export class SharedModule { }
