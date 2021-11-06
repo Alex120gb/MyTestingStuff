@@ -24,13 +24,13 @@
               <div class="div-dropdown btn-group" *ngIf="(accountService.currentUser$| async) as user" dropdown>
                  <a class="dropdown-toggle text-light" dropdownToggle> Welcome {{user.username | titlecase}}</a>
                  <div class="dropdown-menu mt-3" *dropdownMenu>
-                   <a class="dropdown-item">Edit Profile</a>
-                   <div class="dropdown-devider"></div>
+                   <a  routerLink="/member/edit" class="dropdown-item">Edit Profile</a>
+                    <div class="dropdown-devider"></div>
                    <a class="dropdown-item" (click)="logout()">Logout</a>
                  </div>
               </div>
-              
-              
+
+
               <form *ngIf="!(accountService.currentUser$ | async)" #loginForm="ngForm" class="form-inline mt-2 mt-md-0" (ngSubmit)="login()" autocomplete="off">
                 <input type="text" class="form-control" name="username" [(ngModel)]="model.username" placeholder="Username">
                 <input type="password" class="form-control" name="password" [(ngModel)]="model.password" placeholder="Password">
