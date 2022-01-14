@@ -7,7 +7,7 @@
 
     <div class="row mt-5" *ngIf="validationErrors.length > 0">
         <ul class="text-danger">
-            <li *ngIf="let error of validationErrors">
+            <li *ngFor="let error of validationErrors">
                 {{error}}
             </li>
         </ul>
